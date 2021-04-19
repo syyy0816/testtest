@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		body{
+		    /* display: flex; */
+		    padding-left: 50px;
+		    flex-wrap: nowrap;
+		}
+		div {
+		    margin: o;
+		    padding: 0;
+		}
+		div div {
+		    background: #A4CA39;
+		    position: relative;
+		}
+		.android {
+		    height: 404px;
+		    width: 334px;
+		    margin: 100px auto;
+		}
+		.head {
+		    width: 220px;
+		    height: 100px;
+		    top: 32px;
+		    margin-bottom: 10px;
+		    border-radius: 110px 110px 0 0;
+		    transition: all 0.5s ease-in;
+		    transform: rotate(-5deg) translate(50px,0px);
+		    animation: move 1s infinite;
+		}
+		.l_eye,
+		.r_eye {
+		    background: #fff;
+		    width: 20px;
+		    height: 20px;
+		    position: absolute;
+		    top: 42px;
+		    border-radius: 10px;
+			overflow: hidden;
+			animation: moveeye 0.5s infinite;
+		}
+		.l_eye,.r_eye{
+		    background: #fff;
+		    animation: moveeye 0.2s infinite;
+		}
+		.l_eye {
+		    left: 50px;
+		}
+		.r_eye {
+		    right: 50px;
+		}
+		
+		.l_ant,.r_ant {
+		    width: 6px;
+		    height: 50px;
+		    position: absolute;
+		    top: -34px;
+		    border-radius: 3px;
+		}
+		.l_ant {
+		    left: 50px;
+		    transform: rotate(-20deg);
+		    transform-origin: 0px 50px;
+		    animation: moveant 0.5s infinite;
+		}
+		.r_ant {
+		    right: 50px;
+		    transform: rotate(20deg);
+		    transform-origin: 0px 50px;
+		    animation: moveant1 0.5s infinite;
+		}
+		.body {
+		    width: 220px;
+		    height: 184px;
+		    top: 40px;
+		    border-radius: 0 0 25px 25px;
+		    transform: rotate(5deg);
+		    animation: movebody 0.5s infinite;
+		}
+		.l_arm,.r_arm,.l_leg,.r_leg {
+		    width: 50px;
+		    position: absolute;
+		    transition: all 0.5s ease-in;
+		}
+		.l_arm,.r_arm {
+		    height: 150px;
+		    border-radius: 25px;
+		}
+		.l_leg,	.r_leg {
+		    height: 80px;
+		    top: 182px;
+		    border-radius: 0 0 25px 25px;
+		}
+		.l_arm {
+		    left: -58px;
+		    transform-origin: 0px,0px;
+		    transform: rotate(5deg);
+		    animation: movearm 0.5s infinite;
+		}
+		.r_arm {
+		    transform-origin: 0px,0px;
+		    right: -58px;
+		    transform: rotate(5deg);
+		    animation: movearm1 0.5s infinite;
+		}
+		.l_leg {
+		    left: 45px;
+		    transform-origin: 0px,0px;
+		    transform: rotate(5deg);
+		    animation: movearm 0.5s infinite;
+		}
+		.r_leg {
+		    right: 45px;
+		    transform-origin: 0px,0px;
+		    transform: rotate(5deg);
+		    animation: movearm1 0.5s infinite;
+		}
+		@keyframes moveeye{
+			0,100%{
+				background-color: white;
+			}
+			50%{
+				background-color: black;
+				transform: scale(5);
+			}
+		}
+		@keyframes  movebody{
+			0%,100%{
+			    transform: rotate(10deg);
+				background-color: red;
+			}
+			33%{
+				background-color: green;
+			}
+			50%{
+			    transform: rotate(-10deg) scale(1.25) translate(0,100px);
+			}
+			66%{
+				background-color: blue;
+			}
+		}
+		
+		@keyframes move{
+		    0%,100%{
+		        transform: translate(0,0) rotate(0deg) ;
+				background-color: red;
+		    }
+			25%{
+				transform:translate(-0px,-100px) rotate(180deg) scale(2);
+				
+			}
+			50%{
+				transform:translate(0,0) rotate(360deg) ;
+			}
+			75%{
+				transform:translate(0,-50px) rotate(180deg) scale(2);
+				
+			}
+			33%{
+				background-color: green;
+			}
+			66%{
+				background-color: blue;
+			}
+		}
+		@keyframes moveant{
+		    0%,100%{
+		        transform: rotate(-180deg) scale(5) ;
+				background-color: red;
+		    }
+		    50%{
+		        transform: rotate(180deg) ;
+		    }
+			33%{
+				background-color: green;
+			}
+			66%{
+				background-color: blue;
+			}
+		}
+		@keyframes moveant1{
+		    0%,100%{
+		        transform: rotate(180deg) scale(5);
+		    }
+		    50%{
+		        transform: rotate(-180deg);
+		    }
+			16.6%,66.6%{
+				background-color: green;
+			}
+			33.2,86.2%{
+				background-color: blue;
+			}
+		}
+		
+		@keyframes movearm{
+		    0%,100%{
+		        transform: rotate(45deg) translate(-10px);
+				background-color: red ;
+		    }
+			16.6%,66.6%{
+				background-color: green;
+			}
+			33.2,86.2%{
+				background-color: blue;
+			}
+		    50%{
+		        transform: rotate(-45deg) translate(0);
+		    }
+		}
+		@keyframes movearm1{
+		    0%,100%{
+		        transform: rotate(-45deg) translate(50px);
+				background-color: red;
+		    }
+			16.6%,66.6%{
+				background-color: green;
+			}
+			33.2,86.2%{
+				background-color: blue;
+			}
+		    50%{
+		        transform: rotate(45deg) translate(0);
+		    }
+		}
+	</style>
+</head>
+<body>
+    <div class="android">
+        <div style="background-color: #DDA0DD;" class="head">
+            <div class="l_ant"></div>
+            <div class="r_ant"></div>
+            <div class="l_eye"></div>
+            <div class="r_eye"></div>
+        </div>
+        <div style="background-color: #00FFFF;" class="body">
+            <div class="l_arm"></div>
+            <div class="r_arm"></div>
+            <div class="l_leg"></div>
+            <div class="r_leg"></div>
+        </div>
+		
+    </div>
+	<hr>
+</body>
+</html>

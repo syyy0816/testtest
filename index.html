@@ -4,12 +4,20 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<style>
+			
 			*{
 				margin: 0;
 				padding: 0;
 			}
+			.allthing{
+				width: 100%;
+				max-width: 1400px;
+				height: 100%;
+				margin: 0 auto;
+			}
 			body,html{
 				height: 100%;
+				justify-items: center;
 			}
 			h1:first-of-type{
 				text-align: center;
@@ -17,20 +25,21 @@
 				height: 2em;
 				line-height: 2em;
 				border: 2px solid black;
+				max-width: 1600px;
+				box-sizing: border-box;
 			}
 			#top{
 				height: 60%;
-				max-height: 550px;
+				max-width: 1600px;
 				display: flex;
 				align-items: center;
 			}
 			.introuduce{
-				margin-top: 2px;
 				width: 30%;
 				height: 100%;
 				background-color: ghostwhite;
-				left: 0;
 				border: 2px solid black;
+				max-width: 250px;
 			}
 			.name_top{
 				height: 10%;
@@ -40,10 +49,13 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				margin-bottom: 1px;
+				border-width: 1px 0px;
+				border-color: green;
+				border-style: solid;
+				box-sizing: border-box;
 			}
 			#body{
-				width: 66%;
+				width: 100%;
 				height: 100%;
 			}
 			
@@ -52,6 +64,7 @@
 				width: 100%;
 				right: 0;
 				border: 2px solid black;
+				box-sizing: border-box;
 			}
 			a:visited{
 				color: black;
@@ -62,8 +75,7 @@
 			}
 			.name_top:hover{
 				cursor: pointer;
-				color: aqua;
-				border: 1px bisque solid;
+				border: 1px red solid;
 			}
 			.name_top div,.name_top div a{
 				width: 100%;
@@ -73,43 +85,49 @@
 				justify-content: center;
 			}
 			.bottom{
-				height: 30%;
+				min-height: 25%;
+				max-height: 30%;
 				width: 100%;
-				border: 2px solid black;
-				background:url(img/rssmozx6.bmp);
+				border: 4px solid black;
+				background:url(img/rssmozx6.bmp) repeat-x;
+				max-width: 1600px;
+				box-sizing: border-box;
 			}
 		</style>
 	</head>
 	<body>
-		<h1>我们第一个github网页</h1>
-		<div id="top">
-			<div class="introuduce">
-				<div class="name_top">
-					<div>
-						<a href="top.html"  target="in_item">首页</a>
+		<div class="allthing">
+			<h1>我们第一个github网页</h1>
+			<div id="top">
+				<div class="introuduce">
+					<div class="name_top">
+						<div>
+							<a href="top.html"  target="in_item">首页</a>
+						</div>
+					</div>
+					<div class="name_top">
+						<div>
+							<a href="introduce By FuYuchen.html" target="in_item">付禹辰</a>
+						</div>
+					</div>
+					<div class="name_top">
+						<div>
+							<a>
+							包宸嘉
+							</a>
+						</div>
 					</div>
 				</div>
-				<div class="name_top">
-					<div>
-						<a href="introduce By FuYuchen.html" target="in_item">付禹辰</a>
-					</div>
-				</div>
-				<div class="name_top">
-					<div>
-						<a>
-						包宸嘉
-						</a>
-					</div>
+				
+				<div id="body">
+					<iframe src="introduce By FuYuchen.html" name="in_item"></iframe>
 				</div>
 			</div>
-			
-			<div id="body">
-				<iframe src="introduce By FuYuchen.html" name="in_item"></iframe>
+			<div class="bottom">
+			<a href="demo1.html" target="in_item" >.</a>
 			</div>
 		</div>
-		<div class="bottom">
-		<a href="demo1.html" target="in_item">.</a>
-		</div>
+		
 	</body>
 </html>
 <script></script>
